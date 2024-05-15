@@ -1,0 +1,46 @@
+.controllersContainer {
+  font-size: 35px;
+  color: #fff;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  & button {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: rgb(9, 7, 29);
+    border: 2px solid rgb(179, 34, 179);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  & form {
+    margin-left: 25px;
+    & input {
+      height: 45px;
+      border-radius: 20px 0px 0px 20px;
+      border: 0;
+      margin-right: 5px;
+      color: #000;
+      padding-left: 10px;
+      font-size: 15px;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    & button {
+      background-color: rgb(9, 7, 29);
+      border: 2px solid rgb(179, 34, 179);
+      border-radius: 0px 20px 20px 0px;
+      color: #fff;
+      height: 45px;
+      width: 55px;
+      cursor: pointer;
+    }
+  }
+}

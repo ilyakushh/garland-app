@@ -1,0 +1,108 @@
+.lightsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  & li {
+    position: relative;
+    background: gray;
+    border-radius: 50%;
+    width: 24px;
+    height: 40px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 7px;
+      width: 10px;
+      height: 9px;
+      border-radius: 3px;
+      background: black;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 6px;
+      width: 74px;
+      height: 26px;
+      border-bottom: 2px solid white;
+      border-radius: 50%;
+    }
+    &:last-child:after {
+      border-bottom: none;
+    }
+  }
+}
+
+.lightsContainer .active:nth-child(4n + 1) {
+  background-color: rgba(0, 128, 0, 1);
+  animation: animateGreen 1.3s ease infinite;
+}
+
+@keyframes animateGreen {
+  0% {
+    background-color: rgba(0, 128, 0, 0.2);
+  }
+  50% {
+    background-color: rgba(0, 128, 0, 1);
+    box-shadow: 0 0 25px rgba(0, 128, 0, 1), 0 0 45px rgba(0, 128, 0, 1);
+  }
+  100% {
+    background-color: rgba(0, 128, 0, 0.2);
+  }
+}
+
+.active:nth-child(4n + 2) {
+  background-color: rgba(128, 0, 128, 1);
+  animation: animatePurple 1.4s ease infinite;
+}
+
+@keyframes animatePurple {
+  0% {
+    background-color: rgba(128, 0, 128, 0.2);
+  }
+  50% {
+    background-color: rgba(128, 0, 128, 1);
+    box-shadow: 0 0 25px rgba(128, 0, 128, 1), 0 0 45px rgba(128, 0, 128, 1);
+  }
+  100% {
+    background-color: rgba(128, 0, 128, 0.2);
+  }
+}
+
+.active:nth-child(4n + 3) {
+  background-color: rgba(255, 215, 0, 1);
+  animation: animateYellow 1.5s ease infinite;
+}
+
+@keyframes animateYellow {
+  0% {
+    background-color: rgba(255, 215, 0, 0.2);
+  }
+  50% {
+    background-color: rgba(255, 215, 0, 1);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 1), 0 0 45px rgba(255, 215, 0, 1);
+  }
+  100% {
+    background-color: rgba(255, 215, 0, 0.2);
+  }
+}
+
+.active:nth-child(4n + 4) {
+  background-color: rgba(255, 255, 255, 1);
+  animation: animateWhite 1.5s ease infinite;
+}
+
+@keyframes animateWhite {
+  0% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 45px rgba(255, 255, 255, 1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
